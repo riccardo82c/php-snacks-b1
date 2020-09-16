@@ -8,16 +8,38 @@ Olimpia Milano - Cantù | 55-60 -->
 			'casa' => 'Olimpia Milano',
 			'ospite' => 'Cantù',
 			'puntiCasa' => 55,
-			'punstiOspite' => 60,
+			'puntiOspite' => 60,
 		],
 				[
 			'casa' => 'Chicago Bulls',
 			'ospite' => 'Armani',
 			'puntiCasa' => 250,
-			'punstiOspite' => 7,
+			'puntiOspite' => 7,
 		]
 				];
 
-
-	var_dump($partite);
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Es1</title>
+</head>
+<body>
+	<h1>Stampa partite</h1>
+
+	<ul>
+		 <?php for ($i=0; $i < count($partite); $i++) { ?>
+			<li>
+			<span><?php echo $partite[$i]['casa']?> </span>
+			- <span><?php echo $partite[$i]['ospite']?></span>
+			| <span><?php echo $partite[$i]['puntiCasa']?></span>
+			- <span><?php echo $partite[$i]['puntiOspite']?></span>
+			</li>
+		 <?php }?>
+	</ul>
+</body>
+</html>
